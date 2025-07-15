@@ -77,45 +77,16 @@ export class ItemController {
       res.status(500).json({ error: "Server error" });
     }
   };
-  getAccessoriesManItems = async (
-    _req: Request,
-    res: Response
-  ): Promise<void> => {
+  getAccessoriesItems = async (_req: Request, res: Response): Promise<void> => {
     try {
-      const accessoriesManItems =
-        await this.itemService.findAccessoriesManItems();
-      res.status(200).json(accessoriesManItems);
+      const accessoriesItems = await this.itemService.findAccessoriesItems();
+      res.status(200).json(accessoriesItems);
     } catch (error) {
-      console.error("Error fetching accessories man items:", error);
+      console.error("Error fetching accessories items:", error);
       res.status(500).json({ error: "Server error" });
     }
   };
-  getAccessoriesWomanItems = async (
-    _req: Request,
-    res: Response
-  ): Promise<void> => {
-    try {
-      const accessoriesWomanItems =
-        await this.itemService.findAccessoriesWomanItems();
-      res.status(200).json(accessoriesWomanItems);
-    } catch (error) {
-      console.error("Error fetching accessories woman items:", error);
-      res.status(500).json({ error: "Server error" });
-    }
-  };
-  getAccessoriesKidsItems = async (
-    _req: Request,
-    res: Response
-  ): Promise<void> => {
-    try {
-      const accessoriesKidsItems =
-        await this.itemService.findAccessoriesKidsItems();
-      res.status(200).json(accessoriesKidsItems);
-    } catch (error) {
-      console.error("Error fetching accessories kids items:", error);
-      res.status(500).json({ error: "Server error" });
-    }
-  };
+
   /**
    * Отримує один товар за його ID
    * @param req - Express request object з ID товару в параметрах

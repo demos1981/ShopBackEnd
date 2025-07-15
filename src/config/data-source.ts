@@ -18,6 +18,6 @@ export const AppDataSource = new DataSource({
   entities: [User, Item],
   migrations: [CreateItemTable1742688060091, CreateUser1680000000000],
   migrationsRun: true, // Automatically run migrations on startup
-  synchronize: true, // Set to false in production
+  synchronize: false, // Set to false in production
   logging: !isProduction,
 });

@@ -59,19 +59,9 @@ export class ItemService {
       where: { role: ItemStatusEnum.NEW },
     });
   }
-  async findAccessoriesManItems(): Promise<Item[]> {
+  async findAccessoriesItems(): Promise<Item[]> {
     return this.itemRepository.find({
-      where: { sex: ItemSexEnum.ACCESSORIES_MAN },
-    });
-  }
-  async findAccessoriesWomanItems(): Promise<Item[]> {
-    return this.itemRepository.find({
-      where: { sex: ItemSexEnum.ACCESSORIES_WOMAN },
-    });
-  }
-  async findAccessoriesKidsItems(): Promise<Item[]> {
-    return this.itemRepository.find({
-      where: { sex: ItemSexEnum.ACCESSORIES_CHILDREN },
+      where: { sex: ItemSexEnum.ACCESSORIES },
     });
   }
 

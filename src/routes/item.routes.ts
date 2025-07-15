@@ -10,9 +10,7 @@ router.get("/mans", itemController.getMenItems);
 router.get("/womens", itemController.getWomensItems);
 router.get("/kids", itemController.getKidsItems);
 router.get("/new", itemController.getNewItems);
-router.get("/accessories_man", itemController.getAccessoriesManItems);
-router.get("/accessories_woman", itemController.getAccessoriesWomanItems);
-router.get("/accessories_kids", itemController.getAccessoriesKidsItems);
+router.get("/accessories", itemController.getAccessoriesItems);
 
 // GET /api/items/:id - Get item by ID
 router.get("/:id", itemController.getById);
