@@ -61,7 +61,7 @@ export class ItemService {
   }
   async findAccessoriesItems(): Promise<Item[]> {
     return this.itemRepository.find({
-      where: { sex: ItemSexEnum.ACCESSORIES },
+      where: { category: "accessories" },
     });
   }
 

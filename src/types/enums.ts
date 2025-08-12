@@ -9,7 +9,7 @@ export enum ItemSexEnum {
   WOMAN = "woman",
   CHILDREN = "children",
   UNISEX = "unisex",
-  ACCESSORIES = "accessories",
+  // ACCESSORIES = "accessories",
 }
 
 export enum UserRole {

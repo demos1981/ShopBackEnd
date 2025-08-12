@@ -53,7 +53,7 @@ export class Item {
   })
   sex: ItemSexEnum;
 
-  @Column()
+  @Column({ type: "varchar", nullable: true })
   category: string;
 
   @Column({ nullable: true })
